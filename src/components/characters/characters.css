@@ -1,0 +1,8 @@
+.Characters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 5px;
+  li {
+    padding: 0px;
+  }
+}

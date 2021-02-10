@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <div
+    class="Header"
+  >
+    <div>
+      <h1>
+        Hey! I'm API Riiiiiick!
+      </h1>
+    </div>
+    <section>
+      <a
+        href="/"
+      >
+        Back to your list
+      </a>
+    </section>
+  </div>
+  <div>
+    <img
+      alt="Loading"
+      src="https://media.giphy.com/media/PkoBC2GlkLJ5yFIWtf/giphy.gif"
+    />
+  </div>
+</DocumentFragment>
+`;
