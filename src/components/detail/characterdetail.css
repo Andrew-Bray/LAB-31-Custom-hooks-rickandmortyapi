@@ -1,0 +1,18 @@
+.CharacterDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  border: 1px inset cornflowerblue;
+  border-radius: 5%;
+  .DetailBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3vm;
+    span {
+      padding: 10px;
+      border: 1px;
+    }
+  };

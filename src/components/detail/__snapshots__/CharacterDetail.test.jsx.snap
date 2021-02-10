@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetail component renders CharacterDetail 1`] = `
+<DocumentFragment>
+  <figure
+    class="CharacterDetail"
+    data-testid="one-character"
+  >
+    <h2 />
+    <img />
+    <div
+      class="DetailBox"
+    >
+      <span>
+        Species: 
+      </span>
+      <span>
+        Status: 
+      </span>
+    </div>
+    <h3>
+      Origin: 
+    </h3>
+  </figure>
+</DocumentFragment>
+`;

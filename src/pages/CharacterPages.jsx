@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Loading from '../components/app/loading/Loading';
+import Characters from '../components/characters/Characters';
+import Loading from '../components/loading/Loading';
+import { useCharacters } from '../hooks/characters';
 
 
 const CharacterPages = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(true);
-    }, 1000);
-  });
+  const { loading, characters } = useCharacters();
 
   if(loading) return <Loading />;
-  return (
-    <div>
-      <h1>Hello there!</h1>
-    </div>
-  );
+  return <Characters characters={characters}/>;
 };
 
 export default CharacterPages;

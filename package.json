@@ -60,8 +60,11 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "msw": "^0.26.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-uuid": "^1.0.2",
+    "uuid": "^8.3.2"
   }
 }
