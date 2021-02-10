@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Characters from '../components/characters/Characters';
 import Loading from '../components/loading/Loading';
 import { useCharacters } from '../hooks/characters';
 
 
 const CharacterPages = () => {
-  const { loading, characters } = useCharacters();
+  const [count, setCount] = useState(1);
+  const { loading, characters } = useCharacters(count);
+  const decrement = () => setCount(currentCount => currentCount - 1);
+  const increment = () => setCount(currentCount => currentCount + 1);
 
   if(loading) return <Loading />;
-  return <Characters characters={characters}/>;
+  return (
+    <div>
+      <button onClick={decrement}>&lt;</button>
+      {count}
+      <button onClick={increment}>&gt;</button>
+      <Characters 
+        characters={characters} 
+        count={count} />
+    </div>
+  );
 };
 
 export default CharacterPages;

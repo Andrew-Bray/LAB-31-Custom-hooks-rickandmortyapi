@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import { findCharacters, findOneCharacter } from '../services/ImApiRick';
 
-export const useCharacters = () => {
+export const useCharacters = (page) => {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    findCharacters()
+    findCharacters(page)
       .then((characters) => {
         setCharacters(characters);
         setLoading(false);
       });
-  }, []);
+  }, [page]);
 
   return {
     loading,

@@ -2,10 +2,21 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <div>
-    <h1>
-      Hey! I'm API Riiiiiick!
-    </h1>
+  <div
+    class="Header"
+  >
+    <div>
+      <h1>
+        Hey! I'm API Riiiiiick!
+      </h1>
+    </div>
+    <section>
+      <a
+        href="/"
+      >
+        Back to your list
+      </a>
+    </section>
   </div>
   <div>
     <img

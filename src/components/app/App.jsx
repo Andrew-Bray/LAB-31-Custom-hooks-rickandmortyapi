@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CharacterPages from '../../pages/CharacterPages';
 import CharacterById from '../../pages/CharacterById';
 import Header from '../header/Header';
+import './app.css';
 
 export default function App() {
   return (
