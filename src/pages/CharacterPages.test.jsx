@@ -5,6 +5,7 @@ import { setupServer } from 'msw/node';
 import { MemoryRouter } from 'react-router-dom';
 import CharacterPages from './CharacterPages';
 import charactersResponse from '../fixtures/charactersResponse.json';
+import ThemeProvider from '../state/siteTheme';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
@@ -17,9 +18,11 @@ describe('CharacterPages Container', () => {
 
   it('fetches and displays a list of characters', async() => {
     render(
-      <MemoryRouter>
-        <CharacterPages />)
-      </MemoryRouter>);
+      <ThemeProvider>
+        <MemoryRouter>
+          <CharacterPages />)
+        </MemoryRouter>
+      </ThemeProvider>);
 
     await screen.getByAltText('Loading');
 

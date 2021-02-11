@@ -5,6 +5,7 @@ import { setupServer } from 'msw/node';
 import { MemoryRouter } from 'react-router-dom';
 import CharacterById from './CharacterById';
 import character5Response from '../fixtures/character5Response.json';
+import ThemeProvider from '../state/siteTheme';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character/5', (req, res, ctx) => {
@@ -18,9 +19,11 @@ describe('CharacterById Container', () => {
 
   it('fetches and displays a single detailed character', async() => {
     render(
-      <MemoryRouter>
-        <CharacterById match= {{ params: { id: 5 } }} />
-      </MemoryRouter>);
+      <ThemeProvider>
+        <MemoryRouter>
+          <CharacterById match= {{ params: { id: 5 } }} />
+        </MemoryRouter>
+      </ThemeProvider>);
 
     await screen.getByAltText('Loading');
 

@@ -3,7 +3,7 @@
 exports[`CharacterDetail component renders CharacterDetail 1`] = `
 <DocumentFragment>
   <figure
-    class="CharacterDetail"
+    class="CharacterDetail Puny"
     data-testid="one-character"
   >
     <h2 />

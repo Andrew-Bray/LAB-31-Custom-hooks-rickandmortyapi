@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Characters from '../components/characters/Characters';
 import Loading from '../components/loading/Loading';
-import { useCharacters } from '../hooks/characters';
+import { useCharacters } from '../state/characters';
+import { useTheme } from '../state/siteTheme';
+import styles from './characterpages.css';
 
 
 const CharacterPages = () => {
+  const { theme } = useTheme();
+
   const [count, setCount] = useState(1);
   const { loading, characters } = useCharacters(count);
   const decrement = () => setCount(currentCount => currentCount - 1);
@@ -12,7 +16,7 @@ const CharacterPages = () => {
 
   if(loading) return <Loading />;
   return (
-    <div>
+    <div className={styles[theme]}>
       <button onClick={decrement}>&lt;</button>
       {count}
       <button onClick={increment}>&gt;</button>
