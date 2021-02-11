@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './characterdetail.css';
 import { useTheme } from '../../state/siteTheme';
 
-
 const CharacterDetail = ({ name, image, status, species, origin }) => {
   const { theme } = useTheme();
   return (
