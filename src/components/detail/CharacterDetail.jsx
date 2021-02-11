@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './characterDetail.css';
+import styles from './characterdetail.css';
 
 const CharacterDetail = ({ name, image, status, species, origin }) => {
   return (
