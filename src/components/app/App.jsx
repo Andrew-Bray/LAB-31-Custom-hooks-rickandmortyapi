@@ -4,17 +4,20 @@ import CharacterPages from '../../pages/CharacterPages';
 import CharacterById from '../../pages/CharacterById';
 import Header from '../header/Header';
 import './app.css';
+import ThemeProvider from '../../state/siteTheme';
 
 export default function App() {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={CharacterPages} />
-        <Route  
-          path="/character/:id" 
-          component={CharacterById} />
-      </Switch>
+      <ThemeProvider>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={CharacterPages} />
+          <Route  
+            path="/character/:id" 
+            component={CharacterById} />
+        </Switch>
+      </ThemeProvider>
     </Router>
   );
 }

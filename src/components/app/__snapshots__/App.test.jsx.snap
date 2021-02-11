@@ -3,7 +3,7 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div
-    class="Header"
+    class="Header Puny"
   >
     <div>
       <h1>
@@ -16,6 +16,9 @@ exports[`App component renders App 1`] = `
       >
         Back to your list
       </a>
+      <input
+        type="checkbox"
+      />
     </section>
   </div>
   <div>

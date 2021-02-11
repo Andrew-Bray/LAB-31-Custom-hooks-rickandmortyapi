@@ -1,0 +1,16 @@
+.Badass {
+  background-color: purple;
+  color: burlywood;
+  a {
+    text-decoration: none;
+    color: chartreuse;
+  }
+}
+
+.Puny {
+  background-color: white;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
